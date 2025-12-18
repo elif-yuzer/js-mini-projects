@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: white;
+  width: 100%;
+  border-radius: 0.8rem;
+  box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 31.25rem;
+}
+header {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(165, 16, 110, 0.8),
+    rgba(74, 144, 226, 0.6),
+    rgba(26, 26, 46, 0.9)
+  );
+  padding: 1.6rem;
+  text-align: center;
+}
+header h2 {
+  font-weight: 500;
+  letter-spacing: 0.42rem;
+  font-size: 1.6rem;
+  
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  margin-top: 2rem;
+}
+
+.filter-btn {
+  border: none;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.4rem;
+  color: #666;
+  border-radius: 1.2rem;
+}
+.filter-btn:hover {
+  background-color: #f0f0f0;
+}
+.filter-btn.active {
+  background: #4e54c8;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(78, 84, 200, 0.3);
+}
+
+#email-list {
+    padding: 2rem;
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li.email {
+  padding: 1.2rem;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+li.email:hover {
+  background-color: #fafafa;
+  border-left: 4px solid #be9ad2;
+}
+li.email:not(.read) {
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+}
+li.email.read {
+  color: #999;
+  background-color: #f9f9f9;
+}
+li.email.read span {
+  text-decoration: line-through;
+}
