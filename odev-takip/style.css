@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.dark-mode {
+  background-color: #251719;
+  color: #f0f0f0;
+}
+body.dark-mode .container {
+  background-color: #333;
+  box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(120, 200, 255, 0.8),
+    rgba(200, 220, 235, 0.6),
+    rgba(20, 35, 60, 0.9)
+  );
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  margin-top: 1rem;
+  margin-block-end: 1rem;
+  cursor: pointer;
+}
+
+header h2 {
+  font-weight: 400;
+  letter-spacing: 0.42rem;
+  font-size: 1.5rem;
+}
+.theme-btn {
+  background: none;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  filter: brightness(0) invert(1);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s;
+  margin-bottom: 1rem;
+  margin-inline-end: .5rem;
+}
+.theme-btn img {
+  width: 24px;
+  height: 24px;
+}
+.theme-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 31rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+li.student {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+li.student.completed {
+  background-color: #d4edda;
+  color: #222
+ 
+}
+li.student.pending {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: bold;
+}
+body.dark-mode #buttons {
+  background-color: #333;
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .filter-btn {
+  color: #ccc;
+}
+body.dark-mode .filter-btn:hover {
+  background-color: #444;
+}
+body.dark-mode li.student:not(.completed){
+    font-weight: bold;
+  color: #333;
+  background-color: #fff;
+}
+body.dark-mode li.student.completed {
+    color: #999;
+  background-color: #f9f9f9;
+}
