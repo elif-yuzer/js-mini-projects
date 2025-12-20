@@ -1,4 +1,4 @@
-docconst filterBtns = document.querySelectorAll(".filter-btn");
+const filterBtns = document.querySelectorAll(".filter-btn");
 const studentList = document.querySelector("#student-list");
 const themeToggleBtn = document.querySelector("#theme-toggle");
 const themeIcon=document.querySelector("img")
