@@ -1,0 +1,169 @@
+@layer reset, base,layout, components,utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ul {
+    list-style-type: none;
+  }
+  button {
+    border: none;
+    font-family: inherit;
+  }
+}
+
+@layer base {
+  :root {
+    --bg-primary: #f7f9fc;
+    --bg-secondary: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #64748b;
+    --accent-color: #5e81ac;
+    --border-color: #e2e8f0;
+  }
+  body {
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--text-muted);
+    line-height: 1.5;
+    padding: 2rem;
+  }
+  .theme-btn img {
+  width: 24px;
+  height: 24px;
+  
+}
+
+  body.dark-mode {
+    /* dark mode için */
+    --bg-primary: #1e293b;
+    --bg-secondary: #0f172a;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent-color: #88c0d0;
+    --border-color: #334155;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  h1 {
+    color: var(--text-main);
+  }
+
+}
+@layer layout {
+  .layout {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .filter-containers {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .menu-wrapper {
+    container-type: inline-size; /* genıslık yatay ekseni takip et */
+    container-name: menu;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+@layer components {
+  .filter-btn {
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    background-color: #e2e8f0;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .filter-btn:hover {
+    background: #64748b;
+    color: #f1f5f9;
+    box-shadow: 0 4px 10px rgba(202, 180, 166, 0.3);
+  }
+  .filter-btn.active {
+    background: #2c3e50;
+    color: white;
+  }
+
+  .menu-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+  }
+  .card-info {
+    padding: 1.5rem;
+  }
+  .card-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    width: 100%;
+  }
+  .card-image img {
+    width: 100%;
+    height: 100%;
+
+  }
+  .menu-card.soup {
+    border-bottom: 4px solid #94a3b8;
+  } /* Sarı */
+  .menu-card.main {
+    border-bottom: 4px solid #9b59b6;
+  } /* Kırmızı */
+  .menu-card.dessert {
+    border-bottom: 4px solid #5e81ac;
+  }
+  .menu-card.wraps {
+    border-bottom: 4px solid #64748b;
+  }
+  .menu-card.fastfood {
+    border-bottom: 4px solid #5e81ac;
+  }
+  .menu-card.baverage {
+    border-bottom: 4px solid #2c3e50;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .theme-btn {
+    background: none;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    filter: brightness(1) invert(1);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+    margin-inline-end: 0.5rem;
+    
+  }
+  .theme-btn img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) ;
+}
+.theme-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+}

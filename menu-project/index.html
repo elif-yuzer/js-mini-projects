@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Menu</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Comfortaa:wght@300..700& family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <h1>🍽️ Flavor Stop Menu</h1>
+        <button id="theme-toggle" class="theme-btn"><img src="./icon-moon.svg" alt="Dark Mode"></button>
+      </header>
+      <div class="filter-containers">
+        <button class="filter-btn active" data-id="all">All</button>
+        <button class="filter-btn" data-id="soup">Soups</button>
+        <button class="filter-btn" data-id="main">Main Dishes</button>
+        <button class="filter-btn" data-id="wraps">Wraps & Sandwiches</button>
+        <button class="filter-btn" data-id="fastfood">Fast Food</button>
+        <button class="filter-btn" data-id="dessert">Desserts</button>
+        <button class="filter-btn" data-id="baverage">Baverages</button>
+      </div>
+      <div class="menu-wrapper">
+        <ul id="menu-list" class="menu">
+          <!-- <li class="menu-card soup">
+            <div class="card-image"><img src="./images/soup.jpg" alt=""></div>
+            <div class="card-info">
+              <h3>Tomato Soup</h3>
+              <small>50 TL</small>
+            </div> -->
+          
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
