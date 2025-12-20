@@ -1,5 +1,12 @@
 const filterBtns = document.querySelectorAll(".filter-btn");
 const emailList = document.getElementById("email-list");
+const emailBilgileri = [
+  { id: 1, icerik: "Raporlar Hazır mı?", durum: "unread" },
+  { id: 2, icerik: "Toplantı Notları", durum: "read" },
+  { id: 3, icerik: "Haftasonu Planı", durum: "unread" },
+  { id: 4, icerik: "Amazon Kargo Takip", durum: "read" },
+  { id: 5, icerik: "Stajyer Başvurusu", durum: "read" }
+];
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -36,3 +43,16 @@ filterBtns.forEach((btn) => {
     });
   });
 });
+
+const addUII = (emailBilgileri) => {
+  const { id, icerik, durum } = emailBilgileri;
+  const li = document.createElement("li");
+
+  li.classList.add("email", durum);
+  li.textContent = icerik;
+  li.dataset.id = id;
+  emailList.appendChild(li);
+};
+emailBilgileri.forEach((email)=>{
+  addUII(email)
+})
