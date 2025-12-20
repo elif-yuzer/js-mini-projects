@@ -1,11 +1,12 @@
 const filterBtns = document.querySelectorAll(".filter-btn");
 const emailList = document.getElementById("email-list");
+//gecici veritabani bilgilerim
 const emailBilgileri = [
   { id: 1, icerik: "Raporlar Hazır mı?", durum: "unread" },
   { id: 2, icerik: "Toplantı Notları", durum: "read" },
   { id: 3, icerik: "Haftasonu Planı", durum: "unread" },
   { id: 4, icerik: "Amazon Kargo Takip", durum: "read" },
-  { id: 5, icerik: "Stajyer Başvurusu", durum: "read" }
+  { id: 5, icerik: "Stajyer Başvurusu", durum: "read" },
 ];
 
 filterBtns.forEach((btn) => {
@@ -51,8 +52,27 @@ const addUII = (emailBilgileri) => {
   li.classList.add("email", durum);
   li.textContent = icerik;
   li.dataset.id = id;
+  li.addEventListener("click", () => {
+    li.classList.toggle("read");
+    li.classList.toggle("unread");
+  });
+
   emailList.appendChild(li);
 };
-emailBilgileri.forEach((email)=>{
-  addUII(email)
+
+emailBilgileri.forEach((email) => {
+  addUII(email);
+});
+const themeToggleBtn=document.getElementById("theme-toggle")
+const themeIcon=document.querySelector("img")
+
+themeToggleBtn.addEventListener("click",()=>{
+  document.body.classList.toggle("dark-mode")
+  if(document.body.classList.contains("dark-mode")){
+    themeIcon.src="./icon-sun.svg"
+
+  }else {
+    themeIcon.src="./icon-moon.svg"
+  }
+
 })
