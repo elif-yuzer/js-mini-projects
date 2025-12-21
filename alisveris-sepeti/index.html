@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepet Projesi</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h2>Trendyol Simulasyonu</h2>
+      <button class="cart-btn" id="cart-btn">Sepeti Gor 🛒</button>
+    </header>
+
+    <div class="main-content">
+      <p>Urunlerin yer alacağı kısım...</p>
+    </div>
+
+    <div class="modal-container" id="modal-container">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Sepetiniz</h3>
+          <button class="close-btn" id="close-btn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Sepetiniz su an boş</p>
+        </div>
+
+        <div class="modal-footer">
+          <h3>Toplam: <span id="total-price">0 TL</span></h3>
+          <button class="checkout-btn">Sepeti Onayla</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
