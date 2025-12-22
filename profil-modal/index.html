@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Modal Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="avatar">👩‍🏫</div> 
+        <h2>Noro Optimizer</h2> <p>Yazılım Öğretmeni</p>
+        <button id="edit-btn" class="btn-primary">Profili Düzenle ✏️</button>
+    </div>
+
+    <div id="modal-container" class="modal-container">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3>Bilgileri Düzenle</h3>
+                <button id="close-btn" class="close-icon">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <label>İsim Soyisim:</label>
+                <input type="text" value="Noro Optimizer" placeholder="İsim Soyisim">
+                
+                <label >Meslek:</label>
+                <input type="text" value="Yazılım Öğretmeni">
+            </div>
+
+            <div class="modal-footer">
+                <button id="cancel-btn" class="btn-secondary">Vazgeç</button>
+                <button class="btn-primary">Kaydet</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
