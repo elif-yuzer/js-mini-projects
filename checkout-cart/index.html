@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Cart Project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <header class="header">
+      <h1>TeknoStore</h1>
+      <button id="open-cart-btn" class="open-cart-btn">
+        Sepetim 🛒 <span id="cart-count">0</span>
+      </button>
+    </header>
+
+      <main>
+        <h1 class="title">Elektronik Ürünler</h1>
+        <div id="product-list" class="product-grid">
+
+            <!-- <div class="product-card">
+                <div class="image-container">
+                    <img src="./images/laptop.jpg" alt="laptop" width="200px" height="200px">
+                </div>
+
+                <div class="product-info">
+                    <div class="category">Bilgisayar</div>
+                    <h3 class="product-name">Macbook Air M2</h3>
+                    <div class="price">28.000TL</div>
+
+                    <button class="add-to-cart-btn"><span class="icon">🛒</span>Sepete Ekle</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="./images/headphone.jpg" alt="laptop" width="200px" height="200px">
+                </div>
+
+                <div class="product-info">
+                    <div class="category">Aksesuar</div>
+                    <h3 class="product-name">Headphone </h3>
+                    <div class="price">4.000 TL</div>
+
+                    <button class="add-to-cart-btn"><span class="icon">🛒</span>Sepete Ekle</button>
+                </div>
+            </div> -->
+
+        </div>
+      </main>
+
+      <aside class="cart-panel" id="cart-panel">
+        <button id="close-cart-btn" class="close-btn">&times;</button>
+        <h2>Sepetiniz (<span id="cart-count">0</span>)</h2>
+
+        <div id="cart-content" class="cart-content">
+          <div class="empty-cart-message">
+            <p>Sepetinizde henüz ürün yok.</p>
+          </div>
+        </div>
+
+        <div id="order-summary" class="cart-total hidden">
+          <div class="total-row">
+            <span>Sipariş Toplamı</span>
+            <div id="total-price" class="total-amount">0 TL</div>
+          </div>
+          <button id="confirm-btn" class="confirm-btn">Siparişi Onayla</button>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
