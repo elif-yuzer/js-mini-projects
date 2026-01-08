@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformer Button</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="btn-container">
+      <header>
+        <h3>Bawerage</h3>
+        <div class="card">
+          <img
+            src="./baverage.jpg"
+            alt="baverage"
+            width="200px"
+            height="200px"
+          />
+        </div>
+        <div id="add-to-cart" class="add-btn" onclick="guncelle(1)">
+          🛒 Sepete Ekle
+        </div>
+
+        <div id="quantity-controls" class="controls hidden">
+          <button class="circle-btn" onclick="guncelle(-1)">-</button>
+          <span id="adet-sayisi">0</span>
+          <button class="circle-btn" onclick="guncelle(1)">+</button>
+        </div>
+      </header>
+    </div>
+    <div class="fisikes-container">
+      <button onclick="fisiKes()" class="confirm-btn">
+        SİPARİŞİ ONAYLA ✅
+      </button>
+    </div>
+    <div id="modal-alanı" class="modal ">
+        <h3>Siparis Ozeti</h3>
+        <div id="ozet-listesi"></div>
+        <h3 id="ozet-toplam">Toplam: 0 TL</h3>
+
+    </div>
+
+  </body>
+</html>

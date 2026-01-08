@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+   <div class="card">
+    <div class="language">
+        <ul>
+            <li id="lang-en" class="active">EN</li>
+            <li>|</li>
+            <li id="lang-no">NO</li>
+        </ul>
+    </div>
+
+    <form action="" class="search">
+       <button type="button" class="location-button">
+        <img src="https://cdn-icons-png.flaticon.com/512/0/619.png" id="location-btn" alt="Location" />
+    </button>
+        <input type="text" id="city-input" placeholder="Enter city name" spellcheck="false" />
+        <button class="search-button">
+            <img src="./image/search.png" id="search-btn" alt="Search" />
+    
+        </button>
+
+       
+
+    </form>
+
+    <div class="weather-result">
+        </div>
+</div>
+   <script src="./app.js"></script>
+  </body>
+</html>
